@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	
+	<appender name="ROOT_STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- Console will only log info level(above, as well) message -->
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+
+	<root level="DEBUG">
+		<appender-ref ref="ROOT_STDOUT" />
+	</root>
+
+</configuration>
