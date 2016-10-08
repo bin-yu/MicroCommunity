@@ -1,5 +1,7 @@
 target/
 .logs/
+catalina.home_IS_UNDEFINED/
+**/*.log
 test-output/
 pom.xml.tag
 pom.xml.releaseBackup

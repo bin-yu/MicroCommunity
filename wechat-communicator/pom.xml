@@ -4,20 +4,23 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.reborn</groupId>
+		<groupId>com.community</groupId>
 		<artifactId>micro-community</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<packaging>war</packaging>
-	<artifactId>weixin-communicator</artifactId>
-	<name>weixin-communicator</name>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<testng.version>6.8.8</testng.version>
-	</properties>
+	<artifactId>wechat-communicator</artifactId>
+	<name>wechat-communicator</name>
+	<!-- <properties> <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+		<testng.version>6.8.8</testng.version> </properties> -->
 
 	<!-- Add typical dependencies for a web application -->
 	<dependencies>
+		<dependency>
+			<groupId>com.community</groupId>
+			<artifactId>dataaccess-service</artifactId>
+			<version>${version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -47,7 +50,6 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>${testng.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:h2:mem:microcommunity;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    platform: h2
+    initialize: true
