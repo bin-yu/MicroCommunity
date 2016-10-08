@@ -1,0 +1,1 @@
+insert into gong_zhong_hao values('wx73f1e72a530acc34','d8d6ca01bde0c496e019d9fa837db4e0','Bin-Test');

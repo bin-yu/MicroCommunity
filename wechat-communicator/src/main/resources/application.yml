@@ -1,0 +1,40 @@
+spring:
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:h2:mem:microcommunity;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    platform: h2
+    initialize: true
+
+security:
+    basic:
+      enabled: false
+    oauth2:
+        client:
+            clientId: wx73f1e72a530acc34
+            clientSecret: d8d6ca01bde0c496e019d9fa837db4e0
+            accessTokenUri: https://api.weixin.qq.com/sns/oauth2/access_token
+            userAuthorizationUri: https://open.weixin.qq.com/connect/oauth2/authorize
+            scope:
+            - snsapi_userinfo
+            clientAuthenticationScheme: query
+            authentication-scheme: query
+        resource:
+            userInfoUri: https://api.weixin.qq.com/sns/userinfo
+            preferTokenInfo: false
+---
+spring:
+  profiles: dev
+server:
+  port: 8090
+security:
+    oauth2:
+        client:
+            accessTokenUri: http://localhost:8080/sns/oauth2/access_token
+            userAuthorizationUri: http://localhost:8080/connect/oauth2/authorize
+        resource:
+            userInfoUri: http://localhost:8080/sns/userinfo
